@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DOJO MINIMAL</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/static/dojo/framework/dijit/themes/claro/claro.css" />
+</head>
+<body class="claro">
+    <div class="viewport" data-dojo-type="{{widget}}"></div>
+</body>
+<style type="text/css">
+    html, body, .viewport {
+        height:  100% !important;
+        padding: 0px  !important;
+        margin:  0px  !important;
+    }
+</style>
+<script>
+    var dojoConfig = {
+        locale:'',
+        packages: [{
+            name: "common",
+            location: "/static/common"
+        },{
+            name: "forms",
+            location: "/static/forms"
+        }]
+    };        
+</script>
+<script type="text/javascript" src="/static/dojo/framework/dojo/dojo.js"></script>
+<script>
+    require(["dojo/parser","dojo/domReady!"], function(parser) {
+        parser.parse();
+    });
+</script>
+</html>

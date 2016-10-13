@@ -1,10 +1,16 @@
 <div>
-    <div data-dojo-type="dijit/layout/BorderContainer" class="viewport" gutters="false">
-        <div data-dojo-type="dijit/layout/ContentPane" region="top"    style="background-color: red;    height:100px;">A</div>
-        <div data-dojo-type="dijit/layout/ContentPane" region="left"   style="background-color: green;  width:100px;">B</div>
-        <div data-dojo-type="dijit/layout/ContentPane" region="center" style="background-color: blue;   ">C</div>
-        <div data-dojo-type="dijit/layout/ContentPane" region="right"  style="background-color: yellow; width:100px;">D</div>
-        <div data-dojo-type="dijit/layout/ContentPane" region="bottom" style="background-color: purple; height:100px;">E</div>
-        <div data-dojo-type="dijit/layout/ContentPane" region="bottom" style="background-color: violet; height:100px;">F</div>
-    </div>
+    <Border class="viewport" gutters="false">
+        <Pane region="top" style="background-color:red; height:100px;">A</Pane>
+        <Pane region="left" style="background-color:green; width:100px;">B</Pane>
+        <Pane region="center" style="background-color:lightgray;">
+        	<div>
+	        	<Label>URL</Label>
+	        	<TextBox wid="txtTest1" placeholder="put your url here."></TextBox>
+	        	<Button wid="cmdTest1">CLICK ME</Button>
+        	</div>
+        </Pane>
+        <Pane region="right" style="background-color:yellow; width:100px;">D</Pane>
+        <Pane wid="panTest1" region="bottom" style="background-color:purple; height:100px;">E</Pane>
+        <Pane wid="panTest2" region="bottom" style="background-color:violet; height:100px;">F</Pane>
+    </Border>
 </div>

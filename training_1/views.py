@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 
 def home(request):
-    return render(request,'minimal-frame.html',{'widget':'forms/EXM020/frmEXM020'})
+    return render(request,'minimal-frame.html',{'widget':'forms/EXM010/frmEXM010'})

@@ -12,5 +12,13 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', master_views.home),
-    url(r'^forms/EXM010/(?P<method>.*)/$', 'media.forms.EXM010.frmEXM010.dispatcher'),
+    url(r'^forms/EXM010/(?P<method>.*)/$', 'media.forms.EXM101.frmEXM101.dispatcher'),
+    # url(r'^EXM100/(\d+)/(\d+)/$', 'media.forms.EXM100.frmEXM100.LCM'),
+    url(r'^EXM100/$', 'media.forms.EXM100.frmEXM100.load'),
+    url(r'^EXM100/LCM/$', 'media.forms.EXM100.frmEXM100.LCM'),
+    url(r'^EXM100/CLR/$', 'media.forms.EXM100.frmEXM100.CLR'),
+    url(r'^EXM100/GCD/$', 'media.forms.EXM100.frmEXM100.GCD'),
+    url(r'^EXM100/WORDCOU/$', 'media.forms.EXM100.frmEXM100.WORDCOU'),
+
+
 )

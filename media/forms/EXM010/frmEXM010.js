@@ -7,17 +7,18 @@ define([
 
     return declare([MinimalForm], {
         metag: 'EXM010',
-        baseURL: 'forms/EXM010',
+        baseURL: 'EXM010',
         templateString: template,
 
         startup: function() {
             this.inherited(arguments);
             var widget = this;
             on(widget.cmdTest1, 'click', function(){
-                var url = widget.txtTest1.get('value')
                 var data = {};
                 widget.param(data,'txtTest1',['value']);
-                widget.post(url,data);
+                widget.post('calc',data,function(result){
+                    alert(result['HELLO WORLD']);
+                });
             });
         },
     });

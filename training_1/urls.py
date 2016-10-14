@@ -12,5 +12,6 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', master_views.home),
-    url(r'^forms/EXM010/(?P<method>.*)/$', 'media.forms.EXM010.frmEXM010.dispatcher'),
+	url(r'^EXM010/$',          'media.forms.EXM010.frmEXM010.load'),      # LOAD TEMPLATE
+	url(r'^EXM010/calc/$',     'media.forms.EXM010.frmEXM010.calc'), # CALCULATE WITH AJAX
 )

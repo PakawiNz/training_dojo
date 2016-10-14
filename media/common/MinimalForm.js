@@ -50,9 +50,9 @@ define([
                     'X-CSRFToken': cookie('csrftoken'),
                 },
             }).then(function(result){
-                alert('FINISHED\n' + JSON.stringify(result));
+                callback(result);
             },function(error){
-                alert('FAILED\n' + error);
+                console.error(error);
             });
         },
         param: function(data, attach_point, keys){
